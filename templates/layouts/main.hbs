@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{title}}</title>
+</head>
+
+<body style="margin:0;padding:0;background:#f5f5f5;font-family:Arial,sans-serif;">
+
+  <table
+    width="100%"
+    cellpadding="0"
+    cellspacing="0"
+    border="0"
+    style="background:#f5f5f5;padding:40px 0;"
+  >
+    <tr>
+      <td align="center">
+
+        <table
+          width="600"
+          cellpadding="0"
+          cellspacing="0"
+          border="0"
+          style="background:#ffffff;border-radius:10px;overflow:hidden;"
+        >
+
+          <!-- HEADER (NO PADDING) -->
+          <tr>
+            <td>
+              {{> header}}
+            </td>
+          </tr>
+
+          <!-- CONTENT AREA (COMMON PADDING) -->
+          <tr>
+            <td style="padding:30px;">
+
+              <!-- BODY -->
+              {{{body}}}
+
+              <!-- BUTTON -->
+              {{> button}}
+
+              <!-- FOOTER TOP -->
+              {{> footer-top}}
+
+            </td>
+          </tr>
+
+          <!-- FOOTER BOTTOM (NO PADDING) -->
+          <tr>
+            <td style="padding:0;">
+              {{> footer-bottom}}
+            </td>
+          </tr>
+
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+
+</html>

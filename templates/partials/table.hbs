@@ -1,0 +1,41 @@
+<table
+  width="100%"
+  border="1"
+  cellspacing="0"
+  cellpadding="0"
+  style="border-collapse:collapse;border:1px solid #DCDCDC;"
+>
+
+  {{#each rows}}
+    <tr>
+
+      <td
+        width="161"
+        valign="top"
+        style="
+          padding:8px 15px;
+          border:1px solid #DCDCDC;
+          background:#EFEFED;
+          font-family:Arial,sans-serif;
+          font-size:14px;
+        "
+      >
+        <strong>{{label}}</strong>
+      </td>
+
+      <td
+        valign="top"
+        style="
+          padding:8px 15px;
+          border:1px solid #DCDCDC;
+          font-family:Arial,sans-serif;
+          font-size:14px;
+        "
+      >
+        {{value}}
+      </td>
+
+    </tr>
+  {{/each}}
+
+</table>

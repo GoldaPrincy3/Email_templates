@@ -1,0 +1,63 @@
+<table width="100%">
+
+  <tr>
+    <td>
+
+      <!-- TITLE -->
+      <div style="
+        color:#0A0B18;
+        font-family:Arial;
+        font-size:25px;
+        font-weight:700;
+        letter-spacing:-0.5px;
+        margin-bottom:16px;
+      ">
+        {{title}}
+      </div>
+
+      <!-- BADGES -->
+      <div style="margin-bottom:24px;">
+        {{> info-badge label="INFORMATION"}}
+        {{> alert-badge label="General Alert"}}
+      </div>
+
+      <!-- GREETING -->
+      <div style="
+        color:#0A0B18;
+        font-family:Arial;
+        font-size:16px;
+        line-height:28px;
+        margin-bottom:24px;
+      ">
+        <div>Hi {{userName}},</div>
+
+        <div style="margin-top:8px;">
+          {{message}}
+        </div>
+      </div>
+
+      <!-- NEW SECTION -->
+    
+
+    </td>
+  </tr>
+
+  <!-- USER DETAILS -->
+  <tr>
+    <td>
+      <h3>USER DETAILS</h3>
+
+      {{> table rows=userDetails}}
+    </td>
+  </tr>
+
+  <!-- CREATED DETAILS -->
+  <tr>
+    <td>
+      <h3>CREATED DETAILS</h3>
+
+      {{> table rows=createdDetails}}
+    </td>
+  </tr>
+
+</table>
