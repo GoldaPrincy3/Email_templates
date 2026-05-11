@@ -1,9 +1,13 @@
 <table
   width="100%"
-  border="1"
   cellspacing="0"
   cellpadding="0"
-  style="border-collapse:collapse;border:1px solid #DCDCDC;"
+  border="0"
+  style="
+    border-collapse:collapse;
+    width:100%;
+    margin-top:10px;
+  "
 >
 
   {{#each rows}}
@@ -13,23 +17,26 @@
         width="161"
         valign="top"
         style="
-          padding:8px 15px;
+          padding:12px 15px;
           border:1px solid #DCDCDC;
           background:#EFEFED;
           font-family:Arial,sans-serif;
           font-size:14px;
+          font-weight:700;
+          color:#0A0B18;
         "
       >
-        <strong>{{label}}</strong>
+        {{label}}
       </td>
 
       <td
         valign="top"
         style="
-          padding:8px 15px;
+          padding:12px 15px;
           border:1px solid #DCDCDC;
           font-family:Arial,sans-serif;
           font-size:14px;
+          color:#0A0B18;
         "
       >
         {{value}}

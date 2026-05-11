@@ -1,25 +1,26 @@
 <table width="100%">
 
   <tr>
-    <td>
+    <td style="gap:5px;">
 
       <!-- TITLE -->
-      <div style="
-        color:#0A0B18;
-        font-family:Arial;
-        font-size:25px;
-        font-weight:700;
-        letter-spacing:-0.5px;
-        margin-bottom:16px;
-      ">
-        {{title}}
-      </div>
+      <!-- TITLE -->
+<div style="
+  color:#0A0B18;
+  font-family:Arial;
+  font-size:25px;
+  font-weight:700;
+  letter-spacing:-0.5px;
+  margin-bottom:16px;
+">
+  {{title}}
+</div>
 
-      <!-- BADGES -->
-      <div style="margin-bottom:24px;">
-        {{> info-badge label="INFORMATION"}}
-        {{> alert-badge label="General Alert"}}
-      </div>
+<!-- BADGES -->
+<div style="margin-bottom:24px;">
+  {{> info-badge label="INFORMATION"}}
+  {{> alert-badge label="General Alert"}}
+</div>
 
       <!-- GREETING -->
       <div style="
@@ -44,8 +45,14 @@
 
   <!-- USER DETAILS -->
   <tr>
-    <td>
-      <h3>USER DETAILS</h3>
+    <td style="gap:10px;">
+      <div style="color: #0A0B18;
+font-family: Arial;
+font-size: 15px;
+font-style: normal;
+font-weight: 700;
+line-height: 22px; 
+text-transform: uppercase;">USER DETAILS:</div>
 
       {{> table rows=userDetails}}
     </td>
@@ -53,8 +60,14 @@
 
   <!-- CREATED DETAILS -->
   <tr>
-    <td>
-      <h3>CREATED DETAILS</h3>
+       <td style="gap:10px;">
+      <div style="color: #0A0B18;
+font-family: Arial;
+font-size: 15px;
+font-style: normal;
+font-weight: 700;
+line-height: 22px; 
+text-transform: uppercase;">CREATED DETAILS:</div>
 
       {{> table rows=createdDetails}}
     </td>

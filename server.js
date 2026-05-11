@@ -18,6 +18,7 @@ app.engine(
 
     partialsDir: path.join(__dirname, "templates/partials"),
     
+    
   })
 );
 
@@ -48,6 +49,18 @@ app.get("/preview", (req, res) => {
       {
         label: "Email",
         value: "john@gmail.com",
+      },
+      {
+        label: "phone",
+        value: "123-456-7890",
+      },
+      {
+        label: "Role",
+        value: "Admin",
+      },
+      {
+        label: "Group",
+        value: "-",
       },
     ],
 
