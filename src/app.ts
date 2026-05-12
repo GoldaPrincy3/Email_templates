@@ -2,7 +2,7 @@ import express, { Express } from "express";
 import { engine } from "express-handlebars";
 import path from "node:path";
 
-import emailRoutes from "./src/routes/email-routes";
+import emailRoutes from "./routes/email-routes";
 
 const app: Express = express();
 
@@ -10,21 +10,22 @@ app.engine(
   "hbs",
   engine({
     extname: ".hbs",
-
-    helpers: {
-      eq: (a, b) => a === b,
-    },
+helpers: {
+  eq: function (a: any, b: any) {
+    return String(a) === String(b);
+  }
+},
 
     defaultLayout: "main",
 
     layoutsDir: path.join(
       process.cwd(),
-      "src/templates/layouts"
+      "templates/layouts"
     ),
 
     partialsDir: path.join(
       process.cwd(),
-      "src/templates/partials"
+      "templates/partials"
     ),
   })
 );
@@ -35,14 +36,14 @@ app.set(
   "views",
   path.join(
     process.cwd(),
-    "src/templates/emails"
+    "templates/emails"
   )
 );
 
 app.use(
   "/images",
   express.static(
-    path.join(process.cwd(), "src/images")
+    path.join(process.cwd(), "/images")
   )
 );
 
