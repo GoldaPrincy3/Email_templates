@@ -1,0 +1,86 @@
+<div style="width:100%;">
+
+
+  <div style="margin-bottom:24px;">
+
+    <div style="
+      color:#0A0B18;
+      font-family:Arial;
+      font-size:20px;
+      font-weight:700;
+      letter-spacing:-0.5px;
+      margin-bottom:5px;
+    ">
+      {{title}}
+    </div>
+
+   <div style="display:flex; align-items:center; gap:5px;">
+
+  {{#if alert}}
+  {{> info-badge
+    warning=(eq alert.type "warning")
+    critical=(eq alert.type "critical")
+    information=(eq alert.type "information")
+    label=alert.label
+}}
+  {{/if}}
+
+  {{#if secondaryBadge}}
+    {{> alert-badge label=secondaryBadge.label}}
+  {{/if}}
+
+</div>
+  </div>
+
+
+ 
+  <div style="margin-bottom:24px;">
+    <div style="margin-bottom:5px; color: var(--neutral-neutral-0, #000);
+font-family: Arial;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px; ">Hi {{userName}},</div>
+    <div style="color: var(--neutral-neutral-0, #000);
+font-family: Arial;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px; ">{{message}}</div>
+  </div>
+
+
+
+{{#each sections}}
+
+  <div style="{{#unless @last}}margin-bottom:24px;{{/unless}}">
+
+    <div style="
+      color:#0A0B18;
+      font-family:Arial;
+      font-size:15px;
+      font-weight:700;
+      text-transform:uppercase;
+      margin-bottom:12px;
+    ">
+      {{title}}:
+    </div>
+
+    {{> table rows=rows}}
+
+    {{#if @first}}
+      {{#if ../LicenseKey}}
+        <div style="margin-top:24px;">
+          {{> license-key licenseKey=../LicenseKey}}
+        </div>
+      {{/if}}
+    {{/if}}
+
+  </div>
+
+{{/each}}
+
+
+  
+
+</div>

@@ -11,38 +11,52 @@
 >
 
   {{#each rows}}
-    <tr>
+<tr>
 
-      <td
-        width="161"
-        valign="top"
-        style="
-          padding:12px 15px;
-          border:1px solid #DCDCDC;
-          background:#EFEFED;
-          font-family:Arial,sans-serif;
-          font-size:14px;
-          font-weight:700;
-          color:#0A0B18;
-        "
-      >
-        {{label}}
-      </td>
+  <td
+    width="161"
+    valign="top"
+    style="
+      padding:12px 15px;
+      border:1px solid #DCDCDC;
+      background:#EFEFED;
+      font-family:Arial,sans-serif;
+      font-size:15px;
+      font-weight:400;
+      color:#000;
+      vertical-align: middle;
+    "
+  >
+    {{label}}
+  </td>
 
-      <td
-        valign="top"
-        style="
-          padding:12px 15px;
-          border:1px solid #DCDCDC;
-          font-family:Arial,sans-serif;
-          font-size:14px;
-          color:#0A0B18;
-        "
-      >
-        {{value}}
-      </td>
+  <td
+    valign="top"
+    style="
+      padding:12px 15px;
+      border:1px solid #DCDCDC;
+      font-family:Arial,sans-serif;
+      font-size:15px;
+      {{#if highlight}}
+      color:#FF3B30 !important;
+      font-weight:700 !important;
+      {{else}}
+      color:#1E1E1E;
+      font-weight:400;
+      {{/if}}
+    "
+  >
+    {{value}}
 
-    </tr>
-  {{/each}}
+    {{#if badge}}
+      <div style="margin-top:5px;">
+        {{> alert-badge label=badge.label}}
+      </div>
+    {{/if}}
+
+  </td>
+
+</tr>
+{{/each}}
 
 </table>

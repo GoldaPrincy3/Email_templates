@@ -19,41 +19,49 @@
     <tr>
       <td align="center">
 
+
         <table
           width="600"
           cellpadding="0"
           cellspacing="0"
           border="0"
-          style="background:#ffffff;border-radius:10px;overflow:hidden;"
+          style="
+            background:#ffffff;
+            border-radius:10px;
+            overflow:hidden;
+          "
         >
 
-          <!-- HEADER (NO PADDING) -->
+        
           <tr>
-            <td>
+            <td style="padding:0;">
               {{> header}}
             </td>
           </tr>
 
-          <!-- CONTENT AREA (COMMON PADDING) -->
           <tr>
-            <td style="padding:30px;">
+            <td
+              style="
+                padding:30px;
+              "
+            >
 
-              <!-- BODY -->
-              {{{body}}}
+             
+              <div style="display:flex;flex-direction:column;gap:24px;">
 
-              <!-- BUTTON -->
-              <div style="margin: 10px 0;">
-              {{> button}}
+                {{{body}}}
+
+{{> button buttonText=buttonText buttonColor=buttonColor}}
+
+                {{> footer-top}}
+
               </div>
-
-              <!-- FOOTER TOP -->
-              {{> footer-top}}
 
             </td>
           </tr>
 
-          <!-- FOOTER BOTTOM (NO PADDING) -->
-          <tr>
+       
+          <tr >
             <td style="padding:0;">
               {{> footer-bottom}}
             </td>
